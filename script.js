@@ -14,25 +14,25 @@ function generatePassword() {
 
   var passwordLength = prompt("Choose the length of your password between 8 and 128 characters.");
   if ((parseInt(passwordLength)) >= 8 || (parseInt(passwordLength)) <= 128) {
-    var userNumbers = prompt("Do you want numericals in your password?");
+    var userNumbers = confirm("Do you want numericals in your password?");
     if (userNumbers == true) {
       passwordParameters += allNumbers;
     }
-    var userSpecial = prompt("Do you want special characters in your password?");
+    var userSpecial = confirm("Do you want special characters in your password?");
     if (userSpecial == true) {
       passwordParameters += allSpecial;
     }
-    var userUpper = prompt("Do you want to have upper case characters in your password?");
+    var userUpper = confirm("Do you want to have upper case characters in your password?");
     if (userUpper == true) {
-      passwordParameters += userUpper;
+      passwordParameters += allUpper;
     }
-    var userLower = prompt("Do you want to have lower case characters in your password?");
+    var userLower = confirm("Do you want to have lower case characters in your password?");
     if (userLower == true) {
-      passwordParameters += userLower;
+      passwordParameters += allLower;
     }
-
   else {
     alert("The length of the password must between 8 - 128 characters.");
   }
-}
+  }
+  console.log(passwordParameters);
 }
