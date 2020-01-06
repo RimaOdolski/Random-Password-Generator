@@ -13,8 +13,28 @@ var upperCase = confirm("would you like to have upper case characters");
 
 
 
-//Generate PW
+//Generate Random Numbers
 function getRandomNumber() {
   return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
 }
 console.log (getRandomNumber());
+
+//Generate Random Lower case 
+function getRandomLower() {
+  return String.fromCharCode(Math.floor(Math.random() *26) + 97);
+}
+console.log (getRandomLower());
+
+//Generate Random Upper case
+function getRandomUpper() {
+  return String.fromCharCode(Math.floor(Math.random() *26) +65);
+}
+console.log (getRandomUpper());
+
+//Generate Random Special Character 
+function getRandomSpecial() {
+  const specialChar = '!@#$%^&*(){}[]=<>/,.';
+  return specialChar[Math.floor(Math.random() * specialChar.length)];
+}
+console.log (getRandomSpecial());
+
