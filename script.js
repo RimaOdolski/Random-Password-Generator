@@ -35,4 +35,12 @@ function generatePassword() {
   }
   }
   console.log(passwordParameters);
+
+  for (let counter = 0; counter < passwordLength; counter++) {
+    newPassword += passwordParameters[Math.floor(Math.random() * passwordParameters.length)];
+  }
+    console.log (newPassword);
+
+    document.getElementById("password").innerHTML = newPassword;
 }
+/////////////////////////////
