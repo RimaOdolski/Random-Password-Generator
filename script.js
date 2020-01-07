@@ -42,4 +42,13 @@ function generatePassword() {
   } else {
     alert("The length of the password must between 8 - 128 characters.")
   }
+   
+}
+
+//Create Copy to clipboard//
+function copyToClipboard() {
+var copyText = document.getElementById("password");
+copyText.select();
+document.execCommand("copy");
+alert("Copied Password: " + copyText.value);
 }
