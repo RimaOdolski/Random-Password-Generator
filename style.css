@@ -132,6 +132,6 @@ button[disabled] {
   }
 }
 
-#copy{
+#copy {
   background-color: #c0c7cf;
-  display: inline-block !important;
+}
