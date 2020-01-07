@@ -13,7 +13,7 @@ function generatePassword() {
   ///////////////////////////////////////////////////
 
   var passwordLength = prompt("Choose the length of your password between 8 and 128 characters.");
-  if ((parseInt(passwordLength)) >= 8 || (parseInt(passwordLength)) <= 128) {
+  if (passwordLength >= 8 && passwordLength <= 128) {
     var userNumbers = confirm("Do you want numericals in your password?");
     if (userNumbers == true) {
       passwordParameters += allNumbers;
@@ -30,17 +30,16 @@ function generatePassword() {
     if (userLower == true) {
       passwordParameters += allLower;
     }
-  else {
-    alert("The length of the password must between 8 - 128 characters.");
-  }
-  }
-  console.log(passwordParameters);
-
-  for (let counter = 0; counter < passwordLength; counter++) {
-    newPassword += passwordParameters[Math.floor(Math.random() * passwordParameters.length)];
-  }
-    console.log (newPassword);
+    if (passwordParameters != "") {
+      for (let counter = 0; counter < passwordLength; counter++) {
+      newPassword += passwordParameters[Math.floor(Math.random() * passwordParameters.length)];
+      }
+    } else {
+      alert("You need to select at least one character type.")
+    }
 
     document.getElementById("password").innerHTML = newPassword;
+  } else {
+    alert("The length of the password must between 8 - 128 characters.")
+  }
 }
-/////////////////////////////
