@@ -1,7 +1,5 @@
-
+//Generate password function
 function generatePassword() {
-
-  //////////////////////////////////////////////////
 
   var allNumbers = "0123456789";
   var allSpecial = "!@#$%^&*()_+[]{}";
@@ -9,8 +7,6 @@ function generatePassword() {
   var allLower = "abcdefghijklmnopqrstuvwxyz";
   var passwordParameters = "";
   var newPassword = "";
-
-  ///////////////////////////////////////////////////
 
   var passwordLength = prompt("Choose the length of your password between 8 and 128 characters.");
   if (passwordLength >= 8 && passwordLength <= 128) {
@@ -44,7 +40,6 @@ function generatePassword() {
   }
    
 }
-
 //Create Copy to clipboard//
 function copyToClipboard() {
 var copyText = document.getElementById("password");
