@@ -40,10 +40,15 @@ function generatePassword() {
   }
    
 }
-//Create Copy to clipboard//
+// Create copy to clipboard
 function copyToClipboard() {
-var copyText = document.getElementById("password");
-copyText.select();
-document.execCommand("copy");
-alert("Copied Password: " + copyText.value);
-}
+  var copyText = document.getElementById("password");
+  if (copyText.value == "") {
+    alert("There is no password to copy.");
+  }
+  else {
+    copyText.select();
+    document.execCommand("copy");
+    alert("Copied Password: " + copyText.value); 
+  }
+} 
